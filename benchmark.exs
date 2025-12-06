@@ -1,11 +1,10 @@
 defmodule Benchmark do
   @moduledoc """
-  Помощен модул за измерване на производителността на функции с детайлни метрики.
+  Помощен модул за измерване.
   """
 
   @doc """
   Измерва броя итерации, необходими за постигане на целева точност.
-  Връща броя итерации и постигнатия резултат.
   """
   def measure_accuracy(module, function, target_value, tolerance \\ 0.001, max_iterations \\ 100_000) do
     # Първо намираме горна граница където точността е постигната
@@ -87,7 +86,6 @@ defmodule Benchmark do
     %{
       input_n: n,
       recursion_depth: n,
-      explanation: "Всяко рекурсивно извикване обработва един член, така че дълбочина = n"
     }
   end
 
@@ -99,7 +97,6 @@ defmodule Benchmark do
 
     %{
       total_time_milliseconds: time / 1000,
-      iterations: n,
       result: result
     }
   end

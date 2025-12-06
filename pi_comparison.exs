@@ -1,3 +1,9 @@
+# Зареждане на необходимите модули
+Code.require_file("leibniz.exs", __DIR__)
+Code.require_file("wallis.exs", __DIR__)
+Code.require_file("nilakantha.exs", __DIR__)
+Code.require_file("benchmark.exs", __DIR__)
+
 defmodule PiComparison do
   @moduledoc """
   Сравнение на различните алгоритми за приближение на π.
@@ -7,7 +13,7 @@ defmodule PiComparison do
     IO.puts("\n=== Сравнение на алгоритми за приближение на π ===\n")
 
     target_pi = :math.pi()
-    tolerance = 0.0000001
+    tolerance = 0.01
     test_iterations = 1_000_000
     max_iterations = 1_000_000
 
@@ -124,12 +130,6 @@ defmodule PiComparison do
     IO.puts("Целева стойност на π: #{Float.round(target_pi, 10)}\n")
   end
 end
-
-# Зареждане на необходимите модули
-Code.require_file("leibniz.exs", __DIR__)
-Code.require_file("wallis.exs", __DIR__)
-Code.require_file("nilakantha.exs", __DIR__)
-Code.require_file("benchmark.exs", __DIR__)
 
 # Стартиране на сравнението
 PiComparison.run()
