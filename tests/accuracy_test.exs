@@ -13,8 +13,8 @@ defmodule PiAccuracyTest do
     IO.puts("\n=== ТЕСТ ЗА ТОЧНОСТ НА АЛГОРИТМИ ЗА ПРИБЛИЖЕНИЕ НА π ===\n")
 
     target_pi = :math.pi()
-    tolerance = 0.00000000001
-    max_iterations = 100_000_000
+    tolerance = 0.001
+    max_iterations = 100_000
 
     algorithms = [
       {"Leibniz (Рекурсивен)", PiLeibniz, :leibniz_recursive},

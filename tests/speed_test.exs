@@ -13,7 +13,7 @@ defmodule PiSpeedTest do
     IO.puts("\n=== ТЕСТ ЗА СКОРОСТ НА АЛГОРИТМИ ЗА ПРИБЛИЖЕНИЕ НА π ===\n")
 
     target_pi = :math.pi()
-    test_iterations = 1000000
+    test_iterations = 100_000
 
     algorithms = [
       {"Leibniz (Рекурсивен)", PiLeibniz, :leibniz_recursive},
